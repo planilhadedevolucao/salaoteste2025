@@ -1,20 +1,28 @@
 * {
   padding: 0;
   margin: 0;
+  vertical-align: baseline;
+  list-style: none;
+  border: 0;
 }
 
 body {
+  scroll-behavior: smooth;
   display: flexbox;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
+  justify-content: center;
   vertical-align: baseline;
+  align-items: center;
   line-height: 1;
   overflow-x: hidden;
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
 }
 
 html {
@@ -31,8 +39,8 @@ html {
 .container {
   margin: 0 auto;
   padding: 0px;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: auto;
 }
 
 p {
@@ -51,10 +59,24 @@ h1 {
 }
 
 h2 {
+  width: 90%;
+  margin: 50px auto;
+  justify-content: center;
   text-align: center;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 50px;
   box-shadow: 0 0 10px rgba(221, 14, 240, 0.5);
+}
+
+h6 {
+  font-size: 20px;
+  width: 100%;
+  margin: 20px auto;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 100px rgba(8, 8, 8, 0.5);
 }
 
 header {
@@ -93,41 +115,45 @@ header nav a {
 
 .servicos {
   background-color: #f7f7f7;
-  padding: 20px;
+  padding: 10px;
 }
 
 .servico {
+  max-width: 100%;
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 5px;
   width: calc(33.33% - 20px);
 }
 
 .servico img {
+  display: flexbox;
   width: 100%;
   height: 150px;
   object-fit: cover;
+  margin-bottom: 20px;
+
   border-radius: 10px;
 }
 
 .equipe {
-  background-image: linear-gradient(to bottom, #fafafa, #e29fd9);
-  padding: 20px;
+  background-image: linear-gradient(to bottom, #fafafa, #77326e);
 }
 
 .membro {
   display: inline-block;
-  margin-right: 20px;
+  margin-right: 200px;
+  margin: 50px auto;
+  justify-content: center;
+
   width: calc(33.33% - 20px);
 }
 
 .membro img {
   width: 100%;
-  height: 150px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 30%;
-  margin-bottom: 40px;
-  padding-top: 10px;
-  padding-left: 10px;
+  border-radius: 10%;
+  margin: 1px auto;
 }
 
 .contato {
@@ -157,12 +183,18 @@ header nav a {
 }
 
 button {
-  background-color: #130b10;
-  color: #f8f1f1;
-  padding: 10px 50px;
+  background-color: #f8f3f6;
+  color: #0a0606;
+  padding: 0px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 15px;
+  border: 3px solid #050405;
+  margin-right: 50px;
+  width: 150px;
+  height: 50px;
+  margin-top: 10px;
 }
 
 footer {
@@ -176,14 +208,18 @@ footer {
 .jumbotron {
   width: 100%;
   display: flex;
+  background-size: cover;
+  background-position: center;
 
+  justify-content: center;
   text-align: center;
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  background-color: #f1badc;
+  background-color: #f3d4e7;
   border-radius: 10px;
-  padding: 10px;
+  padding: 0;
   margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .footer {
@@ -196,7 +232,7 @@ footer {
 }
 
 .logo {
-  width: 15%;
+  width: 30%;
   display: flex;
   border-radius: 0% 50% 50% 0%;
   text-align: center;
@@ -234,15 +270,15 @@ span {
 \*------------------------------------*/
 .carousel {
   overflow: hidden;
-  max-width: 100%;
-  border-bottom: 1px solid #000000;
+  width: 50%;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
   left: 0;
-  top: 500px;
 }
 .panes {
   list-style: none;
   position: relative;
-  height: 100%;
   width: 500%; /* Number of panes * 100% */
   overflow: hidden; /* This is used solely to clear floats, it does not add functionality. */
 
@@ -257,11 +293,13 @@ span {
 }
 .panes > li > a {
   display: block;
+  width: 100%;
+  height: 100%;
+  margin-right: 50%;
 }
 .carousel img {
   display: block;
   width: 100%;
-  max-width: 100%;
 }
 .carousel h2 {
   font-size: 1em;
@@ -493,23 +531,32 @@ span {
 }
 
 li#s1 h3 {
-  -webkit-animation: title1 20s linear 0s infinite;
-  animation: title1 1s linear 5s infinite;
+  -webkit-animation: title1 1s linear 22s infinite;
+  animation: title1 11s linear 22s infinite;
 }
 li#s2 h3 {
-  -webkit-animation: title2 1s linear 30s forwards;
-  animation: title2 1s linear 5s forwards;
+  -webkit-animation: title2 1s linear 20s forwards;
+  animation: title2 1s linear 20s forwards;
 }
 li#s3 h3 {
-  -webkit-animation: title3 1s linear 60s forwards;
-  animation: title3 1s linear 10s forwards;
+  -webkit-animation: title3 1s linear 20s forwards;
+  animation: title3 1s linear 20s forwards;
+}
+li#s4 h3 {
+  -webkit-animation: title4 1s linear 2s forwards;
+  animation: title4 1s linear 2s forwards;
+}
+li#s5 h3 {
+  -webkit-animation: title5 1s linear 2s forwards;
+  animation: title5 1s linear 2s forwards;
 }
 
 .content span {
   font: italic 14px Georgia, Times, "Times New Roman", serif;
   position: relative;
   top: 0px;
-  right: 0;
+  right: 0px;
+  color: #fff;
 }
 
 @-moz-keyframes title1 {
@@ -641,30 +688,30 @@ li#s3 h3 {
   }
 
   body {
-    min-width: 90px;
+    min-width: 100px;
     max-width: 1041px;
   }
 
   html {
-    min-width: 100%;
-    max-width: 1041%;
+    min-width: 100px;
+    max-width: 1041px;
   }
 }
 
 .carosel {
-  width: 100%;
-  height: 200px;
+  width: 95%;
   padding: 10px;
   outline: 1px solid rgb(22, 17, 17);
   overflow: hidden;
   margin: 50px auto;
   display: flex;
-  position: relative;
-  width: 100%;
+  border-radius: 20px;
+  background-color: #f5f0f3;
 }
 
-.carosel .slide {
-  position: relative;
+.slide {
+  display: flex;
+
   animation: slide 5s infinite ease-out;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
@@ -703,31 +750,27 @@ li#s3 h3 {
   border: 0;
   font-size: 100%;
   font: inherit;
-
+  justify-content: center;
+  align-items: center;
   line-height: 1;
 }
 
-.img-container1 {
-  border-radius: 0px 0px 20px 20px;
-  width: 100%;
-}
-
 .img-container1 img {
-  transform: skew(0deg, -0deg);
-  height: 300px;
-  margin: -35px 0px 0px -70px;
+  border-radius: 20px 20px 20px 20px;
+  width: 70%;
 }
 
 .inner-skew {
-  display: inline-block;
-  border-radius: 20px;
-  overflow: hidden;
+  display: flexbox;
   align-items: center;
-  justify-content: center;
-  width: 220px;
-  height: 350px;
-  margin: 20px 0px 50px 20px;
+  border-radius: 20px;
+  margin: 20px 0px 20px 0px;
   background: #f5efef;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border: 2px solid #e0b9dd;
+  margin: 6px auto;
+  gap: 20px;
+  padding: 10px;
 }
 
 aside {
@@ -777,4 +820,18 @@ aside a:hover {
   justify-content: center;
   align-items: center;
   gap: 30px;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+  html {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.pago {
+  width: 40%;
 }
